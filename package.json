@@ -1,0 +1,22 @@
+{
+  "name": "cssnano-brunch",
+  "version": "1.0.0",
+  "author": {
+    "name": "David Lepaux"
+  },
+  "description": "Adds CSSNano support to Brunch.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dlepaux/cssnano-brunch.git"
+  },
+  "main": "./task/index",
+  "keywords": [
+    "postcss",
+    "brunch",
+    "postprocessor",
+    "cssnano"
+  ],
+  "dependencies": {
+    "cssnano": "^3.3.0"
+  }
+}
