@@ -8,6 +8,20 @@ Installation
 
 `npm install --save cssnano-brunch`
 
+
+Configuration
+-------
+
+See : [CSSNano Options][] for more details
+
+```coffee
+plugins:
+  cssnano:
+    autoprefixer: true
+    discardComments: {removeAll:true}
+```
+
+
 Exemple
 -------
 Before
@@ -35,3 +49,4 @@ MIT
 
 [Brunch]: http://brunch.io
 [CSSNano]: http://cssnano.co
+[CSSNano Options]: http://cssnano.co/options/

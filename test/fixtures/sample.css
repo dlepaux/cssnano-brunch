@@ -1,0 +1,10 @@
+h1::before, h1:before {
+    margin: 10px 20px 10px 20px;
+    color: #ff0000;
+    -webkit-border-radius: 16px;
+    border-radius: 16px;
+    font-weight: normal;
+    font-weight: normal;
+}
+/* invalid placement */
+@charset "utf-8";

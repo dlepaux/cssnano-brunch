@@ -1,8 +1,7 @@
 "use strict"
 
-fs      = require 'fs'
 cssnano = require 'cssnano'
-postcss = require 'postcss'
+progeny = require 'progeny'
 
 class CSSNanoOptimizer
   brunchPlugin: true
@@ -11,14 +10,15 @@ class CSSNanoOptimizer
 
   constructor: (@config) ->
     @options = {
+      # Write sourcemap
       sourcemap: true
+      # Make only safe postcss features
+      safe: true
     }
     
-    cfg = @config.plugins?.cssnano ? {}
+    # Merge config
+    cfg = @config.plugins?.fingerprint ? {}
     @options[k] = cfg[k] for k of cfg
-
-  compile: (params, callback) ->
-    callback null, params
 
   optimize: (params, callback) ->
     opts = {
@@ -31,11 +31,12 @@ class CSSNanoOptimizer
       }
     }
 
+    opts[k] = @options[k] for k of @options
+
     if params.map
       opts.map.prev = params.map.toJSON()
 
-    postcss([cssnano()]).process(params.data, opts).then (result) ->
-      fs.writeFileSync(params.path, result.css);
-      fs.writeFileSync(params.path + '.map', result.map);
+    cssnano.process(params.data, opts).then (result) ->
+      callback(null, { data: result.css, map: result.map.toJSON() })
 
 module.exports = CSSNanoOptimizer
