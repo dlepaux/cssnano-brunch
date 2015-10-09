@@ -8,6 +8,11 @@ Installation
 
 `npm install --save cssnano-brunch`
 
+Usage
+-------
+
+cssnano-brunch is an optimizer so it will be enable only on production environment `brunch build -P`
+
 Exemple
 -------
 Before
