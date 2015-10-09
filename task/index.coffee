@@ -1,7 +1,6 @@
 "use strict"
 
 cssnano = require 'cssnano'
-progeny = require 'progeny'
 
 class CSSNanoOptimizer
   brunchPlugin: true
@@ -13,11 +12,11 @@ class CSSNanoOptimizer
       # Write sourcemap
       sourcemap: true
       # Make only safe postcss features
-      safe: true
+      safe: false
     }
     
     # Merge config
-    cfg = @config.plugins?.fingerprint ? {}
+    cfg = @config.plugins?.cssnano ? {}
     @options[k] = cfg[k] for k of cfg
 
   optimize: (params, callback) ->
