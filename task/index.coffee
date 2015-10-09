@@ -2,19 +2,20 @@
 
 fs      = require 'fs'
 cssnano = require 'cssnano'
-
+postcss = require 'postcss'
 
 class CSSNanoOptimizer
   brunchPlugin: true
+  type: 'stylesheet'
+  extension: 'css'
 
   constructor: (@config) ->
     @options = {
-        type:'stylesheet'
-        extension:'css'
-        pattern: /\.(?:css|scss|sass|less|styl)$/
+      pattern: /\.(?:css|scss|sass|less|styl)$/
+      sourcemap: true
     }
     
-    cfg = @config.plugins?.fingerprint ? {}
+    cfg = @config.plugins?.cssnano ? {}
     @options[k] = cfg[k] for k of cfg
 
   compile: (params, callback) ->
@@ -26,10 +27,12 @@ class CSSNanoOptimizer
       to:   params.path,
       sourcemap: true          
     }
-    
-    cssnano
-      .process(params.data, opts)
-      .then (result) ->
-        fs.writeFileSync params.path, params.path
+    console.log params
+    try
+      cssnano.process(params.data, opts).then (result) ->
+        optimized result.css
+    catch err
+      error = err
+    callback error, optimized
 
 module.exports = CSSNanoOptimizer
