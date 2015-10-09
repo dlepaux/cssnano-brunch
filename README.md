@@ -8,7 +8,6 @@ Installation
 
 `npm install --save cssnano-brunch`
 
-
 Configuration
 -------
 
@@ -21,6 +20,11 @@ plugins:
     discardComments: {removeAll:true}
 ```
 
+=======
+Usage
+-------
+
+cssnano-brunch is an optimizer so it will be enable only on production environment `brunch build -P`
 
 Exemple
 -------
@@ -50,3 +54,4 @@ MIT
 [Brunch]: http://brunch.io
 [CSSNano]: http://cssnano.co
 [CSSNano Options]: http://cssnano.co/options/
+
