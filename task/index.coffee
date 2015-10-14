@@ -12,8 +12,8 @@ class CSSNanoOptimizer
     @options = {
       # Write sourcemap
       sourcemap: true
-      # Make only safe postcss features
-      safe: true
+      # Autoprefixer
+      autoprefixer: {add: false}
     }
     
     # Merge config
@@ -35,13 +35,11 @@ class CSSNanoOptimizer
     }
     
     opts[k] = @options[k] for k of @options
-    console.log opts
     
     if params.map
       opts.map.prev = params.map.toJSON()
     
     cssnano.process(params.data, opts).then (result) ->
-      console.log result.css
       callback(null, { data: result.css, map: result.map.toJSON() })
 
 module.exports = CSSNanoOptimizer

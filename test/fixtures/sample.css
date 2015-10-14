@@ -5,6 +5,7 @@ h1::before, h1:before {
     border-radius: 16px;
     font-weight: normal;
     font-weight: normal;
+    content: 'i ♥ cssnano';
 }
 /* invalid placement */
 @charset "utf-8";
