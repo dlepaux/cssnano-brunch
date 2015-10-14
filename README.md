@@ -37,13 +37,14 @@ h1::before, h1:before {
     border-radius: 16px;
     font-weight: normal;
     font-weight: normal;
+    content: 'i ♥ cssnano';
 }
 /* invalid placement */
 @charset "utf-8";
 ```
 After
 ```css
-@charset "utf-8";h1:before{margin:10px 20px;color:red;border-radius:1pc;font-weight:400}
+@charset "utf-8";h1:before{margin:10px 20px;color:red;border-radius:1pc;font-weight:400;content:'i ♥ cssnano'}
 ```
 
 License
