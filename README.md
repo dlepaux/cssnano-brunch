@@ -49,6 +49,12 @@ After
 @charset "utf-8";h1:before{margin:10px 20px;color:red;border-radius:1pc;font-weight:400;content:'i ♥ cssnano'}
 ```
 
+
+Testing
+-------
+
+Just run `npm i && npm test`
+
 License
 -------
 
