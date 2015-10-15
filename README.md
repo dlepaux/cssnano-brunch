@@ -16,8 +16,7 @@ See : [CSSNano Options][] for more details
 ```coffee
 plugins:
   cssnano:
-    autoprefixer: true
-    discardComments: {removeAll:true}
+    autoprefixer: {add: true}
 ```
 
 =======
