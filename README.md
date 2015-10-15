@@ -1,6 +1,9 @@
 cssnano-brunch
 ===============
 
+[![NPM](https://nodei.co/npm/cssnano-brunch.png)](https://nodei.co/npm/cssnano-brunch/)
+[![NPM](https://nodei.co/npm-dl/cssnano-brunch.png?months=3)](https://nodei.co/npm/cssnano-brunch/)
+
 A [Brunch][] plugin witch optimize with [CSSNano][]
 
 Installation
