@@ -1,4 +1,4 @@
-# cssnano-brunch
+# cssnano-brunch  [![Build Status][travis-badge]][travis]
 
 - [Installation](#installation)
 - [Configuration](#configuration)
