@@ -1,18 +1,22 @@
-cssnano-brunch
-===============
+# cssnano-brunch
+
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Exemple](#exemple)
+- [Testing](#testing)
+- [License](#license)
 
 [![NPM](https://nodei.co/npm/cssnano-brunch.png)](https://nodei.co/npm/cssnano-brunch/)
 [![NPM](https://nodei.co/npm-dl/cssnano-brunch.png?months=3)](https://nodei.co/npm/cssnano-brunch/)
 
 A [Brunch][] plugin witch optimize with [CSSNano][]
 
-Installation
--------
+## <a name="installation"></a> Installation
 
 `npm install --save cssnano-brunch`
 
-Configuration
--------
+## <a name="configuration"></a> Configuration
 
 See : [CSSNano Options][] for more details
 
@@ -22,14 +26,12 @@ plugins:
     autoprefixer: {add: true}
 ```
 
-=======
-Usage
--------
+## <a name="usage"></a> Usage
 
 cssnano-brunch is an optimizer so it will be enable only on production environment `brunch build -P`
 
-Exemple
--------
+## <a name="exemple"></a> Exemple
+
 Before
 ```css
 h1::before, h1:before {
@@ -50,13 +52,11 @@ After
 ```
 
 
-Testing
--------
+## <a name="testing"></a> Testing
 
 Just run `npm i && npm test`
 
-License
--------
+## <a name="license"></a> License
 
 MIT
 
