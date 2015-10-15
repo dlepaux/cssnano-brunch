@@ -63,5 +63,6 @@ MIT
 [Brunch]: http://brunch.io
 [CSSNano]: http://cssnano.co
 [CSSNano Options]: http://cssnano.co/options/
+[travis]: https://travis-ci.org/dlepaux/cssnano-brunch
 [travis-badge]: https://img.shields.io/travis/dlepaux/cssnano-brunch.svg?style=flat
 
