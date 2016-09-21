@@ -1,6 +1,6 @@
 {
   "name": "cssnano-brunch",
-  "version": "1.1.7",
+  "version": "1.1.8",
   "description": "CSSNano support to Brunch.",
   "author": "David Lepaux <d.lepaux@gmail.com>",
   "keywords": [
@@ -24,8 +24,5 @@
     "coffee-script": "~1.9.0",
     "chai": "~1.10.0",
     "mocha": "~2.1.0"
-  },
-  "peerDependencies": {
-    "brunch": "^2.0.0"
   }
 }
