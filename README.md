@@ -1,6 +1,4 @@
-# cssnano-brunch  [![Build Status][travis-badge]][travis]
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/dlepaux/cssnano-brunch.svg)](https://greenkeeper.io/)
+# cssnano-brunch  [![Greenkeeper badge](https://badges.greenkeeper.io/dlepaux/cssnano-brunch.svg)](https://greenkeeper.io/) [![Build Status][travis-badge]][travis]
 
 - [Installation](#installation)
 - [Configuration](#configuration)
