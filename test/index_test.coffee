@@ -26,7 +26,7 @@ describe 'CSSNano', ->
     css = fs.readFileSync('test/fixtures/sample.css', 'utf-8')
     expected = fs.readFileSync('test/fixtures/sample.out.css', 'utf-8')
     cssnano.optimize {data: css}, (err, data) ->
-      expect(data.data).to.be.eql(expected)
+      expect(data.data).to.be.eql(expected.replace(/\n/g, ''))
 
   it 'optimize with sourcemaps', ->
     css = fs.readFileSync('test/fixtures/sample.css', 'utf-8')
