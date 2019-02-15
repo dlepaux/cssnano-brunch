@@ -34,7 +34,7 @@ describe 'CSSNano', ->
       version: 3
       sources: [ 'sample.css' ]
       names: []
-      mappings: 'AAAA,iBAQC,AARD,UACI,iBAA4B,AAC5B,UAAe,AACf,2BAA4B,AAC5B,mBAAoB,AAEpB,gBAAoB,AACpB,qBAAuB,CAC1B'
+      mappings: 'AAAA,gBAQA,CARA,UACI,gBAA2B,CAC3B,SAAc,CACd,0BAA2B,CAC3B,kBAAmB,CAEnB,eAAmB,CACnB,qBACJ'
       file: 'sample.css'
     }
     cssnano.optimize {data: css, path: 'test/fixtures/sample.css'}, (err, data) ->
