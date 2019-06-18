@@ -1,6 +1,6 @@
 {
   "name": "cssnano-brunch",
-  "version": "1.1.8",
+  "version": "1.2.0",
   "description": "CSSNano support to Brunch.",
   "author": "David Lepaux <d.lepaux@gmail.com>",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "main": "./src/index",
   "scripts": {
-    "test": "node_modules/.bin/mocha --compilers coffee:coffee-script/register"
+    "test": "node_modules/.bin/mocha --require babel-core/register"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,8 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "coffee-script": "~1.12.7",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "~4.1.2",
     "mocha": "~6.0.0"
   }
