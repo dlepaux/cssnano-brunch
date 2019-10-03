@@ -13,8 +13,6 @@ class CSSNanoOptimizer {
     this.options = {
       // Write sourcemap
       sourcemap: true,
-      // Autoprefixer
-      autoprefixer: {add: false}
     };
     
     // Merge config
@@ -37,13 +35,11 @@ class CSSNanoOptimizer {
       }
     };
     
-    for (let k in this.options) { opts[k] = this.options[k]; }
-    
     if (params.map) {
       opts.map.prev = params.map.toJSON();
     }
     
-    return cssnano.process(params.data, opts).then(result => callback(null, { data: result.css, map: result.map.toJSON() }));
+    return cssnano.process(params.data, opts, this.options).then(result => callback(null, { data: result.css, map: result.map.toJSON() }));
   }
 }
 CSSNanoOptimizer.initClass();
