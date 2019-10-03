@@ -17,7 +17,19 @@ describe('CSSNano', function() {
       paths: {
         public: path.join('test', 'public')
       },
-      optimize: true
+      optimize: true,
+      plugins: {
+        cssnano: {
+          preset: [
+            'advanced',
+            {
+              autoprefixer: {
+                add: true,
+              },
+            },
+          ],
+        },
+      },
     })
   );
 
@@ -35,7 +47,7 @@ describe('CSSNano', function() {
       version: 3,
       sources: [ 'sample.css' ],
       names: [],
-      mappings: 'AAAA,gBAQA,CARA,UACI,gBAA2B,CAC3B,SAAc,CACd,0BAA2B,CAC3B,kBAAmB,CAEnB,eAAmB,CACnB,qBACJ',
+      mappings: 'AAAA,gBASA,CATA,UACI,gBAA2B,CAC3B,SAAc,CAEd,kBAAmB,CAEnB,eAAmB,CACnB,qBAAsB,CACtB,wBAAiB,CAAjB,qBAAiB,CAAjB,oBAAiB,CAAjB,gBACJ',
       file: 'sample.css'
     };
     return cssnano.optimize({data: css, path: 'test/fixtures/sample.css'}, (err, data) => expect(data.map).to.be.eql(map));

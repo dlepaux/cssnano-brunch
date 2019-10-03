@@ -6,6 +6,7 @@ h1::before, h1:before {
     font-weight: normal;
     font-weight: normal;
     content: 'i ♥ cssnano';
+    user-select: none;
 }
 /* invalid placement */
 @charset "utf-8";

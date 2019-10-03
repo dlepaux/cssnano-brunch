@@ -25,7 +25,11 @@ See the [CSSNano Options][] for more details.
 ```coffee
 plugins:
   cssnano:
-    autoprefixer: {add: true}
+    preset: [
+      'advanced',
+      autoprefixer:
+        add: true
+    ]
 ```
 
 ## <a name="usage"></a> Usage
