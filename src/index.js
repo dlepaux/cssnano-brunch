@@ -14,7 +14,7 @@ class CSSNanoOptimizer {
       // Write sourcemap
       sourcemap: true,
     };
-    
+
     // Merge config
     const cfg = (this.config.plugins != null ? this.config.plugins.cssnano : undefined) != null ? (this.config.plugins != null ? this.config.plugins.cssnano : undefined) : {};
     for (let k in cfg) { this.options[k] = cfg[k]; }
@@ -26,7 +26,7 @@ class CSSNanoOptimizer {
 
   optimize(params, callback) {
     const opts = {
-      from: params.path,           
+      from: params.path,
       to:   params.path,
       map: {
         inline: false,
@@ -34,11 +34,11 @@ class CSSNanoOptimizer {
         sourcesContent: false
       }
     };
-    
+
     if (params.map) {
       opts.map.prev = params.map.toJSON();
     }
-    
+
     return cssnano.process(params.data, opts, this.options).then(result => callback(null, { data: result.css, map: result.map.toJSON() }));
   }
 }
