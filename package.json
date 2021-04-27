@@ -17,7 +17,7 @@
     "url": "https://github.com/dlepaux/cssnano-brunch.git"
   },
   "dependencies": {
-    "cssnano": "^4.1.10"
+    "cssnano": "^5.0.0"
   },
   "license": "MIT",
   "devDependencies": {
